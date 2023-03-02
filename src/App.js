@@ -60,13 +60,15 @@ function App() {
           type="text"
           placeholder="Todos"
           value={formData.name}
-          onChange={(e) => setTodos({...formData, name: e.target.value})}
+          onChange={(e) => setFormData({...formData, name: e.target.value})}
         />
         <input
           type="text"
           placeholder="Todos"
           value={formData.description}
-          onChange={(e) => setTodos({...formData, description: e.target.value})}
+          onChange={(e) =>
+            setFormData({...formData, description: e.target.value})
+          }
         />
         <button onClick={createTodos}>Create Todo</button>
       </div>
